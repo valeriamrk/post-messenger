@@ -11,10 +11,9 @@ export default async function Nav() {
       <Link href={"/"}>
         <h1 className="font-bold text-lg">Send it</h1>
       </Link>
-      <ul className="flex items-center gap-6">
-        {!session?.user && <Login />}
-        {session?.user && <Logged image={session.user?.image || ""} />}
-      </ul>
+      <ul className="flex items-center gap-6"></ul>
+      {!session?.user && <Login />}
+      {session?.user && <Logged image={session.user.image || ""} />}
     </nav>
   );
 }
