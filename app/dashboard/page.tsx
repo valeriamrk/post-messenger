@@ -2,6 +2,7 @@ import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import MyPosts from "./MyPosts";
+import Toggle from "./Toggle";
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions);
